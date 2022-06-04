@@ -2,12 +2,19 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-  name: string;
+  data: string;
 };
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: "John Doe" });
+  if (req.method !== "GET") {
+    res.status(405).send({
+      data: `HTTP error ${405}. Method not allowed`,
+    });
+    throw new Error(`HTTP ${405}. Method not allowed`);
+  } else {
+    res.status(200).json({ data: "John Doe" });
+  }
 }
