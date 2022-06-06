@@ -5,7 +5,7 @@ export default function file(req: NextRequest) {
     throw new Error(`HTTP ${405}. Method not allowed`);
   } else {
     if (req.nextUrl.pathname === "/file") {
-      return new Response("Hello world");
+      return new Response("Hello world.");
     }
   }
 }
