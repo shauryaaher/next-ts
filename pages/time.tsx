@@ -13,7 +13,7 @@ export default class Time extends Component<{}, Timer> {
       time: new Date(),
     };
   }
-  setAnInterval() {
+  changeTime() {
     this.setState({
       time: new Date(),
     });
