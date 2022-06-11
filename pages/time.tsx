@@ -19,7 +19,7 @@ export default class Time extends Component<{}, Timer> {
     });
   }
   componentDidMount() {
-    this.interval = setInterval(() => this.setAnInterval(), 1000);
+    this.interval = setInterval(() => this.changeTime(), 1000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
