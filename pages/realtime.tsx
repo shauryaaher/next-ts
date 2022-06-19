@@ -1,11 +1,16 @@
 import { Component } from "react";
+import styles from "../styles/Realtime.module.css";
 
-export default class Realtime extends Component<{}, { data: string }> {
+interface Data {
+  data: string | undefined;
+}
+
+export default class Realtime extends Component<{}, Data> {
   interval: NodeJS.Timer;
   constructor(props: any) {
     super(props);
     this.state = {
-      data: "",
+      data: undefined,
     };
   }
   componentDidMount() {
@@ -29,7 +34,7 @@ export default class Realtime extends Component<{}, { data: string }> {
           `}
         </style>
         <div>
-          <h1>{this.state.data}</h1>
+          <h1 className={styles.text}>{this.state.data}</h1>
           <input id="textInput" type="text" placeholder="Type something..." />
         </div>
       </body>
