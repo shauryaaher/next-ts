@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const query = await fetch("http://localhost:3000/api/hello");
+  const query = await fetch("http://next-ts-psi.vercel.app/api/hello");
   const data = await query.text();
   return {
     props: {
