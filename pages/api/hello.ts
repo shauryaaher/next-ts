@@ -15,6 +15,8 @@ export default function handler(
     });
     throw new Error(`HTTP ${405}. Method not allowed`);
   } else {
-    res.status(200).json({ data: "John Doe" });
+    res.status(200).send({
+      data: "Hello World",
+    });
   }
 }
