@@ -7,7 +7,7 @@ interface Data {
 
 export default class Realtime extends Component<{}, Data> {
   interval: NodeJS.Timer;
-  constructor(props: any) {
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = {
       data: undefined,
