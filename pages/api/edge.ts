@@ -1,4 +1,6 @@
-export default async function toTheEdge(req: any, res: any) {
+import { NextRequest } from "next/server";
+
+export default async function toTheEdge(req: NextRequest, res: any) {
   if (req.method !== "GET") {
     res.send({ hello: "world" });
   } else {
