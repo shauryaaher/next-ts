@@ -3,5 +3,5 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  return new Response("Hello world!");
+  return new Response({text: "Hello World!"});
 }
