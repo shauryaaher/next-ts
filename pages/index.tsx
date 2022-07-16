@@ -39,6 +39,9 @@ const Home: NextPage = () => {
         <Link href="/data">
           <a className={styles.link}>Data</a>
         </Link>
+        <Link href="/edge">
+          <a className={styles.link}>Edge (uses getStaticProps)</a>
+        </Link>
         <Link href="/api/edge">
           <a className={styles.link}>Edge API handler</a>
         </Link>
