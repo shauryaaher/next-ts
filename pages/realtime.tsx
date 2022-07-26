@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { Component } from "react";
-import styles from "../styles/Realtime.module.css";
+import styles from "../styles/Realtime.module.scss";
 
 interface Data {
   data: string | undefined;
@@ -26,17 +27,22 @@ export default class Realtime extends Component<{}, Data> {
   render() {
     return (
       <body>
-        <style jsx>
+        <style jsx global>
           {`
             body {
               background-color: black;
             }
           `}
         </style>
-        <div>
+        <div className={styles.main}>
           <h1 className={styles.text}>{this.state.data}</h1>
           <input id="textInput" type="text" placeholder="Type something..." />
+          <br />
+          <br />
         </div>
+        <Link href="/">
+          <a className={styles.link}>Go to homepage</a>
+        </Link>
       </body>
     );
   }
