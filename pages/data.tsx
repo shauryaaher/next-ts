@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = async () => {
   const query = await fetch("http://next-ts-psi.vercel.app/api/hello");
@@ -23,6 +24,9 @@ export default function data({ data }: any) {
           `}
         </style>
         <h1>{data}</h1>
+        <Link href="/">
+          <a>Go to homepage</a>
+        </Link>
       </body>
     </>
   );
