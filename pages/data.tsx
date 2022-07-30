@@ -11,13 +11,17 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function data({ data }: any) {
-  const styles = {
-    color: "white",
-    background: "black",
-  };
   return (
     <>
-      <body style={styles}>
+      <body>
+        <style jsx global>
+          {`
+            body {
+              background-color: black;
+              color: white;
+            }
+          `}
+        </style>
         <h1>{data}</h1>
       </body>
     </>
