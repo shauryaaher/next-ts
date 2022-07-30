@@ -1,5 +1,7 @@
 import { Component } from "react";
 import Head from "next/head";
+import Link from "next/link";
+import styles from "../styles/Time.module.scss";
 
 type Timer = {
   time: Object;
@@ -29,9 +31,15 @@ export default class Time extends Component<{}, Timer> {
       <>
         <Head>
           <title>Current Time</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
         </Head>
         <h1>{this.state.time.toLocaleString()}</h1>
+        <Link href="/">
+          <a className={styles.aLink}>Go to homepage</a>
+        </Link>
       </>
     );
   }
