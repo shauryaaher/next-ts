@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { Component } from "react";
 import styles from "../styles/Realtime.module.scss";
 
@@ -26,24 +27,30 @@ export default class Realtime extends Component<{}, Data> {
   }
   render() {
     return (
-      <body>
-        <style jsx global>
-          {`
-            body {
-              background-color: black;
-            }
-          `}
-        </style>
-        <div className={styles.main}>
-          <h1 className={styles.text}>{this.state.data}</h1>
-          <input id="textInput" type="text" placeholder="Type something..." />
-          <br />
-          <br />
-        </div>
-        <Link href="/">
-          <a className={styles.link}>Go to homepage</a>
-        </Link>
-      </body>
+      <>
+      <Head>
+        <title>Realtime text</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+        <body>
+          <style jsx global>
+            {`
+              body {
+                background-color: black;
+              }
+            `}
+          </style>
+          <div className={styles.main}>
+            <h1 className={styles.text}>{this.state.data}</h1>
+            <input id="textInput" type="text" placeholder="Type something..." />
+            <br />
+            <br />
+          </div>
+          <Link href="/">
+            <a className={styles.link}>Go to homepage</a>
+          </Link>
+        </body>
+      </>
     );
   }
 }
