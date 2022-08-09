@@ -45,6 +45,10 @@ const Home: NextPage = () => {
         <Link href="/edge">
           <a className={styles.link}>Edge (uses getStaticProps)</a>
         </Link>
+
+        <Link href="/server-side">
+          <a className={styles.link}>Server side</a>
+        </Link>
         <Link href="/api/edge">
           <a className={styles.link}>Edge API handler</a>
         </Link>

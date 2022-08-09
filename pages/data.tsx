@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import Head from "next/head";
-import styles from "../styles/Data.module.css";
+import styles from "../styles/Data.module.scss";
 
 export const getStaticProps: GetStaticProps = async () => {
   const query = await fetch("http://next-ts-psi.vercel.app/api/hello");
