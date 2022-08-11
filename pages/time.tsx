@@ -37,7 +37,7 @@ export default class Time extends Component<{}, Timer> {
           />
         </Head>
         <body>
-          <style jsx>
+          <style jsx global>
             {`
               body {
                 background-color: black;
