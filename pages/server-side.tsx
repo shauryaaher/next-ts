@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/ServerSide.module.scss";
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const query = await fetch("http://localhost:3000/api/server");
+  const query = await fetch("http://next-ts-psi.vercel.app/api/server");
   const data = await query.text();
   return {
     props: {
