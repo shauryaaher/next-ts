@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           </h1>
 
           <p className={styles.description}>
-            Getting started <br />
+            Getting started (this is for developers only) <br />
             <code className={styles.code}>
               $ git clone{" "}
               <Link href="https://github.com/shauryaaher/next-ts">
