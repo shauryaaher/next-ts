@@ -43,13 +43,19 @@ const Home: NextPage = () => {
           <a className={styles.link}>Data</a>
         </Link>
         <Link href="/edge">
-          <a className={styles.link}>Edge (uses getStaticProps)</a>
+          <a className={styles.link}>Edge (uses getStaticProps())</a>
+        </Link>
+        <Link href="/server-side">
+          <a className={styles.link}>Server-side (uses getServerSideProps())</a>
         </Link>
         <Link href="/api/edge">
           <a className={styles.link}>Edge API handler</a>
         </Link>
         <Link href="/api/hello">
           <a className={styles.link}>Serverless Function hello</a>
+        </Link>
+        <Link href="/api/server">
+          <a className={styles.link}>Serverless Function server</a>
         </Link>
       </main>
     </div>

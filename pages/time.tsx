@@ -9,7 +9,7 @@ type Timer = {
 
 export default class Time extends Component<{}, Timer> {
   interval: NodeJS.Timer;
-  constructor(props: any) {
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = {
       time: new Date(),
@@ -36,20 +36,10 @@ export default class Time extends Component<{}, Timer> {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
-        <body>
-          <style jsx global>
-            {`
-              body {
-                background-color: black;
-                color: white;
-              }
-            `}
-          </style>
-          <h1>{this.state.time.toLocaleString()}</h1>
-          <Link href="/">
-            <a className={styles.aLink}>Go to homepage</a>
-          </Link>
-        </body>
+        <h1>{this.state.time.toLocaleString()}</h1>
+        <Link href="/">
+          <a className={styles.aLink}>Go to homepage</a>
+        </Link>
       </>
     );
   }
