@@ -8,6 +8,8 @@ export default async function handler(req: NextRequest) {
   if (req.method !== "GET") {
     return new Response("Nope. Can't use this method.");
   } else {
-    return new Response("Hello world!");
+    return new Response(
+      "<Suspense /> is nice. Check the React JS docs for more details."
+    );
   }
 }
